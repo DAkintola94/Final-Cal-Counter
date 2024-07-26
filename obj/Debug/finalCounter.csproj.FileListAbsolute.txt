@@ -1,0 +1,10 @@
+C:\Users\Eier\source\repos\finalCounter\finalCounter\bin\Debug\finalCounter.exe.config
+C:\Users\Eier\source\repos\finalCounter\finalCounter\bin\Debug\finalCounter.exe
+C:\Users\Eier\source\repos\finalCounter\finalCounter\bin\Debug\finalCounter.pdb
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.csproj.AssemblyReference.cache
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.Form1.resources
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.Properties.Resources.resources
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.csproj.GenerateResource.cache
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.csproj.CoreCompileInputs.cache
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.exe
+C:\Users\Eier\source\repos\finalCounter\finalCounter\obj\Debug\finalCounter.pdb
