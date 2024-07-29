@@ -64,21 +64,35 @@ namespace finalCounter
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection("Data Source=DENNIS-PC\\SQLEXPRESS;Initial Catalog=results;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
-            connect.Open();
-            SqlCommand command = new SqlCommand("insert into content(savedResult) values('" + richTextBox1.Text + "')", connect);
 
-            int i = command.ExecuteNonQuery();
-
-            if (i!= 0)
+            string connectionString = "Data Source=DENNIS-PC\\SQLEXPRESS;Initial Catalog=results;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
+            using (SqlConnection connect = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Data saved");
-                loadDataIntoGrid();
-            }
+                try
+                {
+                    connect.Open();
+                    using (SqlCommand commando = new SqlCommand("insert into content(savedResult) values('" + richTextBox1.Text + "')", connect))
+                    {
+                        int i = commando.ExecuteNonQuery();
+                        commando.Parameters.AddWithValue("@savedResult", richTextBox1.Text);
+                        if (i!= 0)
+                        {
+                            MessageBox.Show("The following value have been saved: " + richTextBox1.Text);
+                            loadDataIntoGrid();
+                        }
 
-            else
-            {
-                MessageBox.Show("Error");
+                        else
+                        {
+                            MessageBox.Show("An error occured");
+                        }
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occured: " + ex.Message);
+                }
+
             }
 
         }
@@ -179,7 +193,7 @@ namespace finalCounter
             if (dataGridView1.CurrentCell == null)
             {
                 MessageBox.Show("Please, select a value to interract with");
-                return;
+                return; 
 
             }
            
