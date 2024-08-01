@@ -24,7 +24,7 @@ namespace finalCounter
         {
             InitializeComponent();
             instance = this;
-            
+            loadDataIntoGrid();
         }
 
         private void button1_Click(object sender, EventArgs e)
